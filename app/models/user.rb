@@ -5,4 +5,12 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   include DeviseTokenAuth::Concerns::User
+
+  # self.with_posts 
+  #   User.find_by_sql("
+  #   Select 
+  #   FROM
+  #   LEFT JOIN
+  #   ORDER BY ")
+  # end 
 end
